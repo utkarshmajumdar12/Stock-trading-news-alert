@@ -43,7 +43,7 @@ print(f"{pos_dif} is the absolute difference between yesterdays and day before y
 perc_diff =  (pos_dif/closing_price_y)*100
 print(f"Percentage difference in closing prices = {perc_diff}")
 
-if perc_diff > 0:
+if perc_diff > 3:
     response2 = requests.get(NEWS_ENDPOINT, params= news_params)
     news_data = response2.json()
     articles = news_data["articles"]
